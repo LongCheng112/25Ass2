@@ -18,6 +18,47 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Camera.hpp" />
+    <ClInclude Include="Cylinder.h" />
+    <ClInclude Include="Frustum.hpp" />
+    <ClInclude Include="Ground.hpp" />
+    <ClInclude Include="HUD.hpp" />
+    <ClInclude Include="KeyManager.hpp" />
+    <ClInclude Include="Messages.hpp" />
+    <ClInclude Include="MyVehicle.h" />
+    <ClInclude Include="Obstacle.hpp" />
+    <ClInclude Include="ObstacleManager.hpp" />
+    <ClInclude Include="Quaternion.hpp" />
+    <ClInclude Include="RectangularPrism.h" />
+    <ClInclude Include="RemoteDataManager.hpp" />
+    <ClInclude Include="Shape.hpp" />
+    <ClInclude Include="TrapezoidalPrism.h" />
+    <ClInclude Include="TriangularPrism.h" />
+    <ClInclude Include="VectorMaths.hpp" />
+    <ClInclude Include="Vehicle.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Cylinder.cpp" />
+    <ClCompile Include="Frustum.cpp" />
+    <ClCompile Include="Ground.cpp" />
+    <ClCompile Include="HUD.cpp" />
+    <ClCompile Include="KeyManager.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Messages.cpp" />
+    <ClCompile Include="MyVehicle.cpp" />
+    <ClCompile Include="Obstacle.cpp" />
+    <ClCompile Include="ObstacleManager.cpp" />
+    <ClCompile Include="Quaternion.cpp" />
+    <ClCompile Include="RectangularPrism.cpp" />
+    <ClCompile Include="RemoteDataManager.cpp" />
+    <ClCompile Include="Shape.cpp" />
+    <ClCompile Include="TrapezoidalPrism.cpp" />
+    <ClCompile Include="TriangularPrism.cpp" />
+    <ClCompile Include="VectorMaths.cpp" />
+    <ClCompile Include="Vehicle.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{F75A082B-3341-475A-A25E-E50AF8C0ABB8}</ProjectGuid>
@@ -84,17 +125,20 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>C:\Users\Cheng\Desktop\2500 As\25Ass2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\Cheng\Desktop\2500 As\25Ass2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glu32.lib;glut32.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -150,18 +194,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="pch.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="25Ass2.cpp" />
-    <ClCompile Include="pch.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
